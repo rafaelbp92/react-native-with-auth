@@ -17,9 +17,9 @@ function SignupScreen() {
       authContext.authenticate(responseToken);
     } catch (error) {
       Alert.alert("An error occurred while singing up");
-      console.log(error)
+      console.log(error);
+      setIsAuthenticating(false);
     }
-    setIsAuthenticating(false);
   }
 
   if (isAuthenticating) {
